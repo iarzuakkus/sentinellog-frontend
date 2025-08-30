@@ -1,10 +1,10 @@
 .notification {
   position: fixed;
-  bottom: 70px;              /* footer’dan yukarı kaydırdık */
-  right: 30px;               /* sağdan biraz içeri aldık */
+  bottom: 30px;              /* footer’dan yukarı */
+  right: 30px;               /* sağdan biraz içeri */
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
-  z-index: 1000;
+  z-index: 2001;             /* overlay'in üstünde */
 }
 
 .notification:hover {
@@ -12,11 +12,11 @@
 }
 
 .bell-icon {
-  width: 64px;   /* daha büyük ikon */
+  width: 64px;
   height: 64px;
 }
 
-/* aktif olunca kırmızıya boyansın */
+/* aktif olunca rengi DEĞİŞMESİN, aynı kalsın */
 .notification.active .bell-icon {
-  filter: invert(21%) sepia(92%) saturate(6646%) hue-rotate(358deg) brightness(94%) contrast(108%);
+  filter: none;
 }

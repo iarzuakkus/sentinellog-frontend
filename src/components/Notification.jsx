@@ -1,16 +1,28 @@
 import React, { useState } from "react";
 import "../styles/notification.css";
 import bellIcon from "../assets/notification.svg";
+import NotificationModal from "./NotificationModal";
 
 export default function Notification() {
-  const [active, setActive] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
-    <div 
-      className={`notification ${active ? "active" : ""}`} 
-      onClick={() => setActive(!active)}
-    >
-      <img src={bellIcon} alt="Notification" className="bell-icon" />
-    </div>
+    <>
+      {/* Bildirim simgesi */}
+      <div 
+        className={`notification ${open ? "active" : ""}`} 
+        onClick={() => setOpen(true)}
+      >
+        <img src={bellIcon} alt="Notification" className="bell-icon" />
+      </div>
+
+      {/* Modal */}
+      {open && (
+        <NotificationModal 
+          onClose={() => setOpen(false)} 
+          records={[]}   // şimdilik boş, sonra backendden gelecek
+        />
+      )}
+    </>
   );
 }

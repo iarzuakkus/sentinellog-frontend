@@ -47,8 +47,19 @@
 }
 
 /* Gönderme butonu */
+/* Gönderme butonu */
+.send-btn {
+  border: none;            /* çizgiyi kaldır */
+  background: transparent; /* arka planı yok et */
+  cursor: pointer;
+  padding: 0;              /* gereksiz boşlukları kaldır */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .send-btn img {
-  width: 28px;                    
+  width: 28px;
   height: 28px;
 }
 

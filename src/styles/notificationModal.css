@@ -1,0 +1,91 @@
+/* Arka plan yarı saydam (blur yok) */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(95, 95, 95, 0.3);  /* %30 opak siyah */
+  z-index: 1500;
+}
+
+
+/* Modal kutusu */
+.notification-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f9f9f9;
+  border-radius: 10px;
+  border: 2px solid #143463;
+  width: 500px;
+  max-width: 90%;
+  padding: 0;
+  z-index: 2001;                 /* overlay'in üstünde */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Header */
+.modal-header {
+  background: #143463;
+  color: white;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Body */
+.modal-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.record-row {
+  background: #ddd;
+  border-radius: 20px;
+  height: 24px;
+}
+
+.record-row.empty {
+  opacity: 0.4;
+}
+
+/* Footer */
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0 20px;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.arrow-btn img {
+  width: 20px;
+  height: 20px;
+}

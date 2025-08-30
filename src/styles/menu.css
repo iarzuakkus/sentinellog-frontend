@@ -1,20 +1,19 @@
 .menu-panel {
   position: fixed;
-  top: 75px;             /* header yüksekliği */
-  bottom: 30px;          /* footer yüksekliği */
+  top: 75px;
+  bottom: 30px;
   right: 0;
-  width: 280px;
+  width: 260px;                 /* biraz daralttık */
   background: white;
   box-shadow: -4px 0 12px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 16px;                /* padding küçültüldü */
   z-index: 1000;
 
   transform: translateX(100%);
   transition: transform 0.3s ease;
 
-  /* sağ üst ve sağ alt köşeleri yuvarla */
   border-radius: 12px 0 0 12px;
 }
 
@@ -25,18 +24,28 @@
 .menu-panel button {
   background: none;
   border: none;
-  padding: 12px 20px;
+  padding: 10px 16px;          /* daha küçük padding */
+  margin-bottom: 10px;         /* butonlar arası boşluk */
   text-align: left;
   font-size: 16px;
   cursor: pointer;
   border-radius: 6px;
   font-family: "Poppins", sans-serif;
+  transition: background 0.2s, color 0.2s;
 }
 
+/* Hover efekti */
 .menu-panel button:hover:not(:disabled) {
   background: #f0f0f0;
 }
 
+/* Aktif (seçili) buton */
+.menu-panel button.active {
+  background: #143463;  /* tema mavisi */
+  color: #fff;
+}
+
+/* Disabled buton */
 .menu-panel button:disabled {
   color: #aaa;
   cursor: not-allowed;

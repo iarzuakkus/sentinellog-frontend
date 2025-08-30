@@ -29,6 +29,7 @@ export default function Header({ activePage, setActivePage }) {
         open={menuOpen}                      // 👈 prop ile open bilgisini gönder
         onClose={() => setMenuOpen(false)}
         setActivePage={setActivePage}
+        activePage={activePage}
       />
     </header>
   );

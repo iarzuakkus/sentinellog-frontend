@@ -7,15 +7,16 @@ import Rapor from "./pages/Rapor";
 
 import "./styles/global.css";
 
-
 export default function App() {
-  const [activePage, setActivePage] = useState("logasistan");
-  const [showModal, setShowModal] = useState(false);
+  const [activePage, setActivePage] = useState("logasistan"); // hangi sayfa açık
+  const [showModal, setShowModal] = useState(false); // bildirim modal
 
   return (
     <div className={`app-container ${showModal ? "blurred" : ""}`}>
+      {/* Header’a activePage veriyoruz */}
       <Header activePage={activePage} setActivePage={setActivePage} />
       
+      {/* Orta alan */}
       <main className="main-content">
         {activePage === "logasistan" && <LogAsistan />}
         {activePage === "rapor" && <Rapor />}
