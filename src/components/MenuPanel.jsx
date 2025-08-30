@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/menu.css";
 
-export default function MenuPanel({ onClose, setActivePage }) {
+export default function MenuPanel({ open, onClose, setActivePage }) {
   return (
-    <div className="menu-panel">
+    <div className={`menu-panel ${open ? "open" : ""}`}>
       <button onClick={() => { setActivePage("logasistan"); onClose(); }}>
         Log Asistan
       </button>

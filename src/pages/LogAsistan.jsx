@@ -10,14 +10,15 @@ export default function LogAsistan() {
     if (!question.trim()) return;
 
     // ⚡ Backend geldiğinde buraya API isteği eklenecek
-    setAnswer("/api/user endpoint’i son 7 gün içerisinde toplam 457 hata ile en fazla hatayı üreten endpoint olmuştur.");
+    setAnswer(
+      "/api/user endpoint’i son 7 gün içerisinde toplam 457 hata ile en fazla hatayı üreten endpoint olmuştur."
+    );
     setQuestion(""); // input temizlensin
   };
 
   return (
     <div className="page">
       <div className="chat-card">
-        
         {/* Input alanı */}
         <div className="input-wrapper">
           <input
@@ -32,20 +33,21 @@ export default function LogAsistan() {
           </button>
         </div>
 
-        {/* Cevap alanı */}
-        {answer && (
-          <div className="answer-box">
-            <p>{answer}</p>
-
-            {/* Memnuniyet */}
-            <div className="feedback">
-              <p>Bu yanıttan memnun musunuz?</p>
-              <button>Evet</button>
-              <button>Hayır</button>
-            </div>
-          </div>
-        )}
-
+        {/* Cevap alanı (her zaman görünsün) */}
+        <div className="answer-box">
+          {answer ? (
+            <>
+              <p>{answer}</p>
+              <div className="feedback">
+                <p>Bu yanıttan memnun musunuz?</p>
+                <button>Evet</button>
+                <button>Hayır</button>
+              </div>
+            </>
+          ) : (
+            <p className="placeholder">Cevap burada görünecek...</p>
+          )}
+        </div>
       </div>
     </div>
   );

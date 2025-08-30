@@ -15,8 +15,8 @@ export default function Header({ activePage, setActivePage }) {
       </div>
 
       {/* Hamburger */}
-      <div 
-        className={`hamburger ${menuOpen ? "open" : ""}`} 
+      <div
+        className={`hamburger ${menuOpen ? "open" : ""}`}
         onClick={() => setMenuOpen(!menuOpen)}
       >
         <div></div>
@@ -25,9 +25,11 @@ export default function Header({ activePage, setActivePage }) {
       </div>
 
       {/* Menü Paneli */}
-      {menuOpen && (
-        <MenuPanel onClose={() => setMenuOpen(false)} setActivePage={setActivePage} />
-      )}
+      <MenuPanel
+        open={menuOpen}                      // 👈 prop ile open bilgisini gönder
+        onClose={() => setMenuOpen(false)}
+        setActivePage={setActivePage}
+      />
     </header>
   );
 }

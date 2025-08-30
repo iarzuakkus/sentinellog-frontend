@@ -15,16 +15,17 @@
   background: #f7f7f7;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  padding: 30px;
-  width: 70% !important;       
-  max-width: 900px !important;
-  min-height: 450px !important;
+  padding: 40px;
+  width: 80% !important;           /* genişliği artırdık */
+  max-width: 1000px !important;    /* daha büyük ekranlarda da genişlesin */
+  min-height: 60vh !important;     /* dikeyde daha fazla yer kaplasın */
   
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* içerikler üst ve alt arasında dağılsın */
-  gap: 20px;
+  justify-content: space-between;
+  gap: 24px;
 }
+
 
 /* Input alanı */
 .input-wrapper {
@@ -60,10 +61,18 @@
   color: #333;
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 
-  flex: 1;                         /* boşlukları kaplasın */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;  /* metin yukarıda, feedback aşağıda */
+  justify-content: space-between;
+}
+
+/* Placeholder yazısı */
+.answer-box .placeholder {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  margin: auto 0; /* dikeyde ortalasın */
 }
 
 /* Memnuniyet bölümü */
@@ -72,7 +81,7 @@
   background: #f0f0f0;
   border-radius: 8px;
   padding: 10px;
-  margin-top: auto;                /* her zaman en altta */
+  margin-top: auto;
 }
 
 .feedback p {

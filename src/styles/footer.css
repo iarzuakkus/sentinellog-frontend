@@ -1,8 +1,8 @@
 .footer {
   background: #143463;
-  height: 50px;                 /* header’dan daha ince */
-  border-radius: 10px 10px 0 0; /* sadece üst köşeler yuvarlak */
-  position: fixed;              /* sayfanın en altına sabitle */
+  height: 30px;
+  border-radius: 12px 12px 0 0;  /* üst köşeler yuvarlak */
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -13,4 +13,5 @@
   color: white;
   font-size: 12px;
   font-family: "Poppins", sans-serif;
+  z-index: 1001; /* menüye göre önde */
 }

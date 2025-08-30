@@ -1,47 +1,48 @@
 .header {
   background: #143463;
   color: white;
-  height: 90px;                 
-  padding: 0 40px;               
+  height: 65px;                 
+  padding: 0 30px;
   display: flex;
-  align-items: flex-end;          /* ALT HİZALAMA */
+  align-items: flex-end;         
   justify-content: space-between;
-  border-radius: 0 0 14px 14px;  
-  padding-bottom: 15px;           /* biraz yukarı kaldırmak için */
+  border-radius: 0 0 12px 12px;  /* alt köşeler yuvarlak */
+  padding-bottom: 10px;
+  z-index: 1001;                 /* menüden önde */
 }
 
 /* Logo alanı */
 .logo-section {
   display: flex;
-  align-items: flex-end;          /* alt hizalama */
-  gap: 14px;
+  align-items: flex-end;
+  gap: 10px;
 }
 
 .logo-img {
-  height: 70px;                   /* biraz küçültüldü */
+  height: 50px;
 }
 
 .logo-text {
   font-family: "Poppins", sans-serif;
-  font-size: 38px;                /* logo ile orantılı */
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 400;
   margin: 0;
-  line-height: 1;                 /* alt çizgi hizası için */
+  line-height: 1.1;
 }
 
 /* Hamburger menü */
 .hamburger {
-  width: 36px;   /* küçültüldü */
-  height: 26px;  /* daha az yüksek */
+  width: 28px;   
+  height: 20px;  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  margin-bottom: 8px;             /* logo yazısının altıyla hizalanması için */
+  margin-bottom: 6px;
 }
 
 .hamburger div {
   background: white;
-  height: 5px;   /* biraz inceltildi */
-  border-radius: 4px;
+  height: 4px;
+  border-radius: 3px;
 }
