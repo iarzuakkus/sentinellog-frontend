@@ -1,0 +1,22 @@
+.notification {
+  position: fixed;
+  bottom: 70px;              /* footer’dan yukarı kaydırdık */
+  right: 30px;               /* sağdan biraz içeri aldık */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+.notification:hover {
+  transform: scale(1.15);
+}
+
+.bell-icon {
+  width: 64px;   /* daha büyük ikon */
+  height: 64px;
+}
+
+/* aktif olunca kırmızıya boyansın */
+.notification.active .bell-icon {
+  filter: invert(21%) sepia(92%) saturate(6646%) hue-rotate(358deg) brightness(94%) contrast(108%);
+}

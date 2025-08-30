@@ -1,0 +1,95 @@
+/* ==============================
+   Log Asistan Sayfası - CSS
+   ============================== */
+
+.page {
+  flex: 1;                        
+  display: flex;
+  justify-content: center;        /* yatay ortala */
+  align-items: center;            /* dikey ortala */
+  padding: 20px;
+  min-height: calc(100vh - 160px); /* header + footer arası boşluk */
+}
+
+.page .chat-card {
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 70% !important;       
+  max-width: 900px !important;
+  min-height: 450px !important;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* içerikler üst ve alt arasında dağılsın */
+  gap: 20px;
+}
+
+/* Input alanı */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;                
+  background: transparent;
+  padding: 6px;
+}
+
+/* Gönderme butonu */
+.send-btn img {
+  width: 28px;                    
+  height: 28px;
+}
+
+/* Cevap kutusu */
+.answer-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 14px;                
+  color: #333;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+
+  flex: 1;                         /* boşlukları kaplasın */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* metin yukarıda, feedback aşağıda */
+}
+
+/* Memnuniyet bölümü */
+.feedback {
+  text-align: center;
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: auto;                /* her zaman en altta */
+}
+
+.feedback p {
+  margin: 0 0 8px;
+  font-size: 14px;                
+}
+
+.feedback button {
+  border: none;
+  padding: 6px 12px;              
+  margin: 0 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #ddd;
+  font-size: 13px;
+}
+
+.feedback button:hover {
+  background: #ccc;
+}

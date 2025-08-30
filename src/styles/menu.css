@@ -1,0 +1,32 @@
+.menu-panel {
+  position: absolute;
+  top: 120px;             /* header’ın hemen altı */
+  right: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.menu-panel button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+}
+
+.menu-panel button:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.menu-panel button:disabled {
+  color: #aaa;
+  cursor: not-allowed;
+}

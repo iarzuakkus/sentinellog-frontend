@@ -1,0 +1,16 @@
+.footer {
+  background: #143463;
+  height: 50px;                 /* header’dan daha ince */
+  border-radius: 10px 10px 0 0; /* sadece üst köşeler yuvarlak */
+  position: fixed;              /* sayfanın en altına sabitle */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+}
